@@ -1,0 +1,34 @@
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav #drawer class="sidenav" fixedInViewport
+      [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+      [mode]="(isHandset$ | async) ? 'over' : 'side'"
+      [opened]="(isHandset$ | async) === false">
+    <mat-toolbar>Dashboard</mat-toolbar>
+    <mat-nav-list>
+      <a mat-list-item >Radar- Relevence</a>
+      <a mat-list-item >Bar-1 Intensity</a>
+     
+      <a mat-list-item ><p>Bar-2</p>PESTEL-Relevence </a>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    
+    <mat-toolbar color="primary">
+      
+      <button
+        type="button"
+        aria-label="Toggle sidenav"
+        mat-icon-button
+        (click)="drawer.toggle()"
+        *ngIf="isHandset$ | async">
+        <mat-icon aria-label="Side nav toggle icon">Dashboard</mat-icon>
+      </button>
+      <span><mat-icon>dashboard</mat-icon>Data Visualization</span><div style="padding-right: 75%;" ></div>
+     <button  routerLink="/home" (click)="reload()" style="float: right;"> <span class="material-icons" style="font-size: 30px; color: rgb(28, 10, 186);">logout</span></button>
+    </mat-toolbar>
+    <app-home></app-home>
+    <app-line-chart></app-line-chart>
+    <app-radarchart></app-radarchart>
+    <!-- Add Content Here -->
+  </mat-sidenav-content>
+</mat-sidenav-container>

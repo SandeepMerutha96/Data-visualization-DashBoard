@@ -1,0 +1,14 @@
+/* Add this to your component's CSS file or styles.scss */
+.chart-container {
+    width: 1000px;
+    height: 500px;
+    margin-right: 300px;
+    /* Add additional styling as needed */
+  }
+  
+  /* External CSS - styles.css */
+  /* Customize chart styles here */
+  #myChart1 {
+    border: 1px solid #ddd; /* Example border styling */
+  }
+  

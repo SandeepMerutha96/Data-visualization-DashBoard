@@ -1,0 +1,24 @@
+/* Add this to your component's CSS file or styles.scss */
+.filter-container {
+    margin-bottom: 20px;
+  }
+  
+  .filter-container select,
+  .filter-container button {
+    margin-right: 10px;
+    /* Add additional styling as needed */
+  }
+  
+  .chart-container {
+    width: 1000px;
+    height: 500px;
+    margin-right: 300px;
+    border: 1px solid #ddd; /* Example border styling */
+    /* Add additional styling as needed */
+  }
+  
+  /* Customize chart styles here */
+  #myChart4 {
+    border: 1px solid #ddd; /* Example border styling */
+  }
+  

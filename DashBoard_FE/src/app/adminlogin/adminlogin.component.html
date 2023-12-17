@@ -1,0 +1,37 @@
+<div class="app">
+    <mat-card class="example-card">
+      <mat-card-header>
+        <mat-card-title>Login</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <form class="example-form" #loginForm="ngForm" (ngSubmit)="submit()">
+          <table class="example-full-width" cellspacing="0">
+            <tr>
+              <td>
+                <mat-form-field class="example-full-width">
+                  <input matInput id="userName" placeholder="Username" [(ngModel)]="userName" name="username" required minlength="4">
+                  <div
+                    *ngIf="loginForm.controls['username']?.invalid && (loginForm.controls['username'].dirty || loginForm.controls['username'].touched)"
+                    class="alert"
+                  ></div>
+                  <!-- <div *ngIf="loginForm.controls['username'].errors?.['required']">Username is required.</div> -->
+                  <div *ngIf="loginForm.controls['username']?.errors?.['minlength']">
+                    Name must be at least 4 characters long.
+                  </div>
+                </mat-form-field>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <mat-form-field class="example-full-width">
+                  <input matInput placeholder="Password" [(ngModel)]="password" type="password" name="password" required>
+                </mat-form-field>
+              </td>
+            </tr>
+          </table>
+          <button mat-raised-button style="margin-left: 100px;" type="submit" color="primary" [disabled]="loginForm.invalid">Login</button>
+        </form>
+      </mat-card-content>
+    </mat-card>
+  </div>
+  

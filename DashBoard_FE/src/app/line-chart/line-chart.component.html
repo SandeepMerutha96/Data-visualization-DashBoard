@@ -1,0 +1,16 @@
+<div>
+  <select [(ngModel)]="selectedRegion">
+    <option value="">All Regions</option>
+    <option *ngFor="let reg of region" [value]="reg">{{ reg }}</option>
+  </select>
+  <select [(ngModel)]="selectedTopic">
+    <option value="">All Topics</option>
+    <option *ngFor="let top of topic" [value]="top">{{ top }}</option>
+  </select>
+
+  <button (click)="filterData2()">Apply Filter</button>
+</div>
+
+<div class="chart-container">
+  <canvas id="myChart1" width="500" height="400"></canvas>
+</div>

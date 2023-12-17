@@ -1,0 +1,40 @@
+/* Add this to your component's CSS file or styles.scss */
+
+.sidenav-container {
+  height: 100%;
+}
+
+.sidenav {
+  width: 250px;
+  background-color: #fff; /* Set your desired background color */
+  box-shadow: 1px 0px 5px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow */
+}
+
+.mat-toolbar {
+  background-color: #2196F3; /* Set your desired background color for the toolbar */
+  color: #fff; /* Set your desired text color for the toolbar */
+}
+
+.mat-nav-list {
+  padding: 8px; /* Add padding to the list items */
+}
+
+.mat-list-item {
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Add a smooth transition effect for background color */
+}
+
+.mat-list-item:hover {
+  background-color: #f0f0f0; /* Set your desired background color on hover */
+}
+
+.mat-icon-button {
+  color: #fff; /* Set your desired color for the icon button */
+}
+
+.mat-sidenav-content {
+  padding: 20px; /* Add padding to the content area */
+}
+
+/* Adjust as needed for your specific styling preferences */
+
